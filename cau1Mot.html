@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="theThirdHighestPoint"></p>
+</body>
+<script>
+    let point = [70, 90, 60, 100, 40, 50, 80]
+    let firstPoint = 0;
+    let secondPoint = 0;
+    let thirdPoint = 0;
+    for (let i = 0; i < point.length; i++) {
+        if (point[i] > firstPoint) {
+            firstPoint = point[i];
+        }
+
+           else if (point[i] > secondPoint && point[i] > firstPoint) {
+                secondPoint = point[i];
+            }
+
+           else if (point[i] > thirdPoint && point[i] > secondPoint) {
+                thirdPoint = point[i];
+            }
+    }
+    document.getElementById("theThirdHighestPoint").innerHTML = "The third highest point is: " + thirdPoint;
+</script>
+</html>
